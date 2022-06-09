@@ -1,22 +1,36 @@
 /* é um seletor da raiz do documento */
 :root {
-  --primary-color: hsl(170, 100%, 26%);
+  --primary-color: hsl(348, 67%, 20%);
   --headline-color: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
+  --brand-beige: hsl(39, 100%, 97%);
   font-size: 62.5%;
 }
+
 * {
   box-sizing: border-box;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 1.6rem;
-  text-align: center;
   margin: 0;
 }
 
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+header {
+  width: 37.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin-top: 4.1rem;
+}
 h4 {
   /* o valor de 1rem = 10px referente ao valor estabelecido no root*/
   font-size: 1.4rem;
   color: var(--primary-color);
+  margin-bottom: 1.6px;
 }
 
 h1 {
@@ -24,20 +38,65 @@ h1 {
   color: var(--headline-color);
   /* altura da linha */
   line-height: 130%;
+  margin-bottom: 2.4rem;
 }
 
 p {
   font-size: 1.8rem;
   color: var(--paragraph);
   line-height: 150%;
+  margin-bottom: 3.2rem;
 }
 
 button {
   background: var(--primary-color);
   border: none;
-  border-radius: 0.8rem;
+  border-radius: 4rem;
+  display: block;
+  color: #ffffff;
+  margin-bottom: 6rem;
+  height: 6.2rem;
+  width: 26.3rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 button img {
   width: 10%;
+}
+
+img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3.2rem;
+}
+
+.stats {
+  width: 32.7rem;
+  height: 47rem;
+  margin-inline: auto;
+  background: var(--brand-beige);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.stat h3 {
+  font-size: 4.8rem;
+  color: var(--headline-color);
+  line-height: 130%;
+  margin-bottom: 0.4rem;
+}
+
+.stat p {
+  margin: 0;
+  color: var(--primary-color);
 }
