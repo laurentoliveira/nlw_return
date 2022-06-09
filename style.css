@@ -1,9 +1,11 @@
 /* é um seletor da raiz do documento */
 :root {
-  --primary-color: hsl(348, 67%, 20%);
+  --primary-color: hsl(349, 67%, 20%);
   --headline-color: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
   --brand-beige: hsl(39, 100%, 97%);
+  --brand-light: rgba(148, 61, 78, 0.293);
+  --nav-height: 7.2rem;
   font-size: 62.5%;
 }
 
@@ -18,14 +20,27 @@ body {
   text-align: center;
 }
 
-header {
+.wrapper {
   width: 37.5rem;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 2rem;
-  padding-left: 2rem;
-  margin-top: 4.1rem;
+  margin-inline: auto;
 }
+header {
+  margin-top: calc(4.1rem + var(--nav-height));
+}
+
+header::before {
+  content: '';
+  width: 100vw;
+  height: calc(108rem + var(--nav-height));
+  background-color: var(--brand-light);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* eixo z */
+  z-index: -1;
+}
+
 h4 {
   /* o valor de 1rem = 10px referente ao valor estabelecido no root*/
   font-size: 1.4rem;
@@ -52,7 +67,6 @@ button {
   background: var(--primary-color);
   border: none;
   border-radius: 4rem;
-  display: block;
   color: #ffffff;
   margin-bottom: 6rem;
   height: 6.2rem;
@@ -72,21 +86,25 @@ button img {
   width: 10%;
 }
 
-img {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 3.2rem;
+div img {
+  display: block;
+  margin-inline: auto;
+  object-position: 0 2rem;
+  width: 26.4rem;
 }
 
-.stats {
+.card {
   width: 32.7rem;
   height: 47rem;
+  padding-block: 4rem;
   margin-inline: auto;
   background: var(--brand-beige);
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 6rem;
+  border: 1px solid var(--brand-light);
+  border-radius: 8px;
 }
 
 .stat h3 {
@@ -99,4 +117,26 @@ img {
 .stat p {
   margin: 0;
   color: var(--primary-color);
+}
+
+/* Navigation */
+
+nav {
+  display: flex;
+  height: var(--nav-height);
+  position: fixed;
+  padding: 1.6rem 2.4rem;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .scroll {
+  background: var(--primary-color);
+  width: 100vw;
 }
