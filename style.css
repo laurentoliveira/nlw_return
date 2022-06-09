@@ -1,0 +1,43 @@
+/* é um seletor da raiz do documento */
+:root {
+  --primary-color: hsl(170, 100%, 26%);
+  --headline-color: hsl(210, 11%, 15%);
+  --paragraph: hsl(210, 9%, 31%);
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 0;
+}
+
+h4 {
+  /* o valor de 1rem = 10px referente ao valor estabelecido no root*/
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 3.4rem;
+  color: var(--headline-color);
+  /* altura da linha */
+  line-height: 130%;
+}
+
+p {
+  font-size: 1.8rem;
+  color: var(--paragraph);
+  line-height: 150%;
+}
+
+button {
+  background: var(--primary-color);
+  border: none;
+  border-radius: 0.8rem;
+}
+
+button img {
+  width: 10%;
+}
