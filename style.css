@@ -4,8 +4,9 @@
   --headline-color: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
   --brand-beige: hsl(39, 100%, 97%);
-  --brand-light: rgba(148, 61, 78, 0.293);
+  --brand-light: rgba(148, 61, 78, 0.294);
   --nav-height: 7.2rem;
+
   font-size: 62.5%;
 }
 
@@ -136,7 +137,7 @@ nav .wrapper {
   align-items: center;
   justify-content: space-between;
 }
-nav .scroll {
+nav.scroll {
   background: var(--primary-color);
   width: 100vw;
 }
