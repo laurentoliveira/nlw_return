@@ -137,14 +137,14 @@ nav .wrapper {
   align-items: center;
   justify-content: space-between;
 }
-nav.scroll {
+nav.Scroll {
   background: var(--primary-color);
   width: 100vw;
 }
-nav.scroll svg:nth-child(1) path {
+nav.Scroll svg:nth-child(1) path {
   fill: white;
 }
 
-nav.scroll svg:nth-child(2) path {
+nav.Scroll svg:nth-child(2) path {
   stroke: white;
 }
